@@ -1,0 +1,19 @@
+@media(min-width:300px){
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // Pos relative for the mobile menu
+        position: relative;
+        padding-top: 2em;
+    }
+}
+
+@media(min-width:1024px){
+    .header{
+        justify-content: flex-start;
+    }
+    .logo{
+        margin-right: 2rem;
+    }
+}
