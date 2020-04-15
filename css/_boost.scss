@@ -43,3 +43,23 @@
         }
     }
 }
+
+@media(min-width:1024px){
+    .boost{
+        margin: 0 -9.25em;
+        padding: 2.65em 9.25em;
+        &__heading{
+            font-size: 3rem;
+        }
+        &__pattern{
+            &--desktop{
+                display: block;
+                left: 0;
+                top: 0;
+            }
+            &--mobile{
+                display: none;
+            }
+        }
+    }
+}

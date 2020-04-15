@@ -606,6 +606,24 @@ body, button, input {
   }
 }
 
+@media (min-width: 1024px) {
+  .boost {
+    margin: 0 -9.25em;
+    padding: 2.65em 9.25em;
+  }
+  .boost__heading {
+    font-size: 3rem;
+  }
+  .boost__pattern--desktop {
+    display: block;
+    left: 0;
+    top: 0;
+  }
+  .boost__pattern--mobile {
+    display: none;
+  }
+}
+
 @media (min-width: 300px) {
   .footer {
     background: var(--very_dark_violet);
@@ -649,6 +667,33 @@ body, button, input {
   .footer__social__icon:hover, .footer__social__icon:active {
     cursor: pointer;
     fill: var(--cyan);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    margin: 0 -9.25em;
+    padding: 4 9.25em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer__article {
+    text-align: left;
+    margin-right: 2rem;
+  }
+  .footer__logo {
+    margin-right: auto;
+    margin-left: 9.25em;
+  }
+  .footer__social {
+    margin-right: 9.25em;
   }
 }
 /*# sourceMappingURL=main.css.map */
