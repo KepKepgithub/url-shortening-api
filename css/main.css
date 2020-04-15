@@ -63,6 +63,10 @@ body, button, input {
     position: relative;
     padding-top: 2em;
   }
+  .header__logo {
+    fill: #34313D;
+    width: 150px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -71,7 +75,7 @@ body, button, input {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .logo {
+  .header__logo {
     margin-right: 2rem;
   }
 }
@@ -454,14 +458,49 @@ body, button, input {
   }
 }
 
-.footer__social__icon {
-  fill: black;
-  -webkit-transition: fill 150ms;
-  transition: fill 150ms;
-}
-
-.footer__social__icon:hover {
-  cursor: pointer;
-  fill: cyan;
+@media (min-width: 300px) {
+  .footer {
+    background: var(--very_dark_violet);
+    color: white;
+    fill: white;
+    margin: 0 -1.25em;
+    padding: 4em 1.25em;
+    display: -ms-grid;
+    display: grid;
+    place-items: center center;
+    gap: 2.5rem;
+  }
+  .footer__logo {
+    cursor: pointer;
+  }
+  .footer__article {
+    text-align: center;
+  }
+  .footer__article__heading {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+  .footer__article__link {
+    line-height: 2.5rem;
+    color: var(--gray);
+  }
+  .footer__article__link:hover {
+    cursor: pointer;
+    color: var(--cyan);
+  }
+  .footer__social {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (40px)[4];
+        grid-template-columns: repeat(4, 40px);
+    place-items: center center;
+  }
+  .footer__social__icon {
+    fill: white;
+  }
+  .footer__social__icon:hover, .footer__social__icon:active {
+    cursor: pointer;
+    fill: var(--cyan);
+  }
 }
 /*# sourceMappingURL=main.css.map */

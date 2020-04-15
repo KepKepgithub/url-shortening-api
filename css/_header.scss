@@ -6,14 +6,18 @@
         // Pos relative for the mobile menu
         position: relative;
         padding-top: 2em;
+        &__logo{
+            fill:#34313D;
+            width: 150px;
+        }
     }
 }
 
 @media(min-width:1024px){
     .header{
         justify-content: flex-start;
-    }
-    .logo{
-        margin-right: 2rem;
+        &__logo{
+            margin-right: 2rem;
+        }
     }
 }

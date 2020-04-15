@@ -1,0 +1,45 @@
+@media(min-width:300px){
+    .footer{
+        background: var(--very_dark_violet);
+        color: white;
+        fill: white;
+        margin: 0 -1.25em;
+        padding: 4em 1.25em;
+
+        display: grid;
+        place-items: center center;
+        gap: 2.5rem;
+
+        &__logo{
+            cursor: pointer;
+        }
+        &__article{
+            text-align: center;
+            &__heading{
+                margin-bottom: 1rem;
+                font-size: 1.25rem;
+            }
+            &__link{
+                line-height: 2.5rem;
+                color: var(--gray);
+                &:hover{
+                    cursor: pointer;
+                    color: var(--cyan);
+                }
+            }
+        }
+        &__social{
+            display: grid;
+            grid-template-columns: repeat(4,40px);
+            place-items: center center;
+
+            &__icon{
+                fill: white;
+                &:hover,&:active{
+                    cursor: pointer;
+                    fill: var(--cyan);
+                }
+            }
+        }
+    }
+}
