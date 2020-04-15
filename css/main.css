@@ -32,7 +32,7 @@ body, button, input {
   .background_gray {
     position: absolute;
     width: 100%;
-    height: 300vh;
+    height: 325vh;
     left: 0;
     top: 130vh;
     background: #F0F1F5;
@@ -360,6 +360,7 @@ body, button, input {
     position: relative;
     padding-top: 6rem;
     text-align: center;
+    margin-bottom: 5rem;
   }
   .statistics__intro {
     margin-bottom: 6rem;
@@ -408,5 +409,59 @@ body, button, input {
   .statistics__card__paragraph {
     color: var(--grayish_violet);
   }
+}
+
+@media (min-width: 300px) {
+  .boost {
+    background: var(--dark_violet);
+    margin: 0 -1.25em;
+    padding: 4.9em 1.25em;
+    text-align: center;
+    position: relative;
+  }
+  .boost__pattern {
+    position: absolute;
+    pointer-events: none;
+  }
+  .boost__pattern--desktop {
+    display: none;
+  }
+  .boost__pattern--mobile {
+    top: 0;
+    right: 0;
+  }
+  .boost__heading, .boost__cta {
+    position: relative;
+    z-index: 2;
+  }
+  .boost__heading {
+    color: white;
+    margin-bottom: 1.5rem;
+  }
+  .boost__cta {
+    border: none;
+    background: var(--cyan);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: .5em 2em;
+    border-radius: 2rem;
+  }
+  .boost__cta:hover {
+    cursor: pointer;
+    -webkit-filter: brightness(1.1);
+            filter: brightness(1.1);
+  }
+}
+
+.footer__social__icon {
+  fill: black;
+  -webkit-transition: fill 150ms;
+  transition: fill 150ms;
+}
+
+.footer__social__icon:hover {
+  cursor: pointer;
+  fill: cyan;
 }
 /*# sourceMappingURL=main.css.map */

@@ -6,6 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
   <link rel="stylesheet" href="./css/main.css">
+  <!-- script needs to be on top  to convert img to svg-->
+  <script src="./JS/img_to_svg.js"></script>
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
 
 </head>
@@ -15,7 +17,7 @@
 
   <div class="content_wrap">
     <header class="header">
-      <img src="./logo/logo.svg" alt="icon-logo" class="logo">
+      <img src="./logo/logo.svg" alt="icon-logo" class="header__logo">
     
       <input type="checkbox" name="menu__checkbox" id="menu__checkbox" class="menu__checkbox">
       <label for="menu__checkbox" class="menu__label">
@@ -129,27 +131,44 @@
         <button class="boost__cta">Get Started</button>
       </section>
 
+      <footer class="footer">
+        <img src="" alt="" class="footer__logo">
+        
+        <article class="footer__article">
+          <h1 class="footer__article__heading">Features</h1>
+        
+          Link Shortening
+          Branded Links
+          Analytics
+        </article>
+      
+        <article class="footer__article">
+          <h1 class="footer__article__heading">Resources</h1>
+        
+          Blog
+          Developers
+          Support
+        </article>
+      
+        <article class="footer__article">
+          <h1 class="footer__article__heading">Company</h1>
+        
+          About
+          Our Team
+          Careers
+          Contact
+        </article>
+
+        <article class="footer__social">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="test"><path fill="#FFF" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+          <img src="./icons/icon-facebook.svg" alt="icon-facebook" class="footer__social__icon" onload="SVGInject(this)">
+          <img src="./icons/icon-twitter.svg" alt="icon-twitter" class="footer__social__icon" onload="SVGInject(this)">
+          <img src="./icons/icon-pinterest.svg" alt="icon-pinterest" class="footer__social__icon" onload="SVGInject(this)">
+          <img src="./icons/icon-instagram.svg" alt="icon-instagram" class="footer__social__icon" onload="SVGInject(this)">
+        </article>
+      
+      </footer>
       <!--
-      Features
-    
-      Link Shortening
-      Branded Links
-      Analytics
-    
-      Resources
-    
-      Blog
-      Developers
-      Support
-    
-      Company
-    
-      About
-      Our Team
-      Careers
-      Contact -->
-    
-    <!--   
       <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="#">Your Name Here</a>.
@@ -157,5 +176,4 @@
     </div>
 
 </body>
-<script src="./JS/img_to_svg.js"></script>
 </html>
