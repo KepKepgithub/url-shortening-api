@@ -16,12 +16,12 @@
         &__input{
             margin-left: -5%;
             width: 110%;
-            // margin-bottom: 2rem; for when error pops up
             margin-bottom: 1rem;
+            margin-bottom: 2rem;
             padding: .5em 1em;
             border-radius: .2rem;
-            // border: 3px solid var(--red);
             border: 3px solid transparent;
+            border: 3px solid var(--red);
 
             position: relative;
         }
@@ -34,7 +34,7 @@
                 font-style: italic;
                 font-size: 0.9rem;
 
-                display: none;
+                // display: none;
             }
         }
         &__pattern{
@@ -61,6 +61,32 @@
             &:hover{
                 cursor: pointer;
                 filter: brightness(1.1);
+            }
+        }
+    }
+}
+
+@media(min-width:1024px){
+    .tool{
+        padding: 3em 4em;
+        &__content_wrap{
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            align-items: center;
+            gap: 15px;
+        }
+        &__input{
+            width: 100%;
+            margin-bottom: 0;
+        }
+        &__pattern{
+            &--mobile{
+                display: none;
+            }
+            &--desktop{
+                display: block;
+                top: 0;
+                left: 0;
             }
         }
     }

@@ -60,3 +60,54 @@
         }
     }
 }
+
+
+@media(min-width:1024px){
+    .background_line{
+        width: 800px;
+        height: 8px;
+        left: 0;
+        top: 71%;
+    }
+    .statistics{
+        display: grid;
+        grid-template-rows: 200px 350px;
+        gap: 6rem;
+
+        &__intro{
+            margin: 0;
+            display: grid;
+            justify-items: center;
+            &__heading{
+                font-size: 2.75rem;
+                margin: 0;
+            }
+            &__paragraph{
+                max-width: 49%;
+            }
+        }
+
+        &__card{
+            height: 80%;
+            align-self: center;
+            &__wrap{
+                display: grid;
+                gap: 35px;
+                grid-template-columns: repeat(3,1fr);
+            }
+            &:nth-child(1){
+                align-self: flex-start;
+            }
+            &:nth-child(3){
+                align-self: flex-end;
+            }
+            &__icon{
+                width: 50px;
+                height: 50px;
+                &__background{
+                    left: 45px;
+                }
+            }
+        }
+    }
+}

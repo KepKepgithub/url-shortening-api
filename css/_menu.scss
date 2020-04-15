@@ -8,8 +8,7 @@
         overflow: hidden;
 
         height: 0;
-        opacity: 0;
-        transition: all 250ms;
+        transition: height 250ms;
 
         // Label is the mobile menu button
         &__checkbox{

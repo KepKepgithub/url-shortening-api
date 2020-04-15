@@ -44,8 +44,16 @@ body, button, input {
 }
 
 @media (min-width: 1024px) {
+  .background_gray {
+    position: absolute;
+    width: 100%;
+    height: 325vh;
+    left: 0;
+    top: 85vh;
+    background: #F0F1F5;
+  }
   body {
-    padding: 0 7em;
+    padding: 0 9.25em;
   }
 }
 
@@ -89,9 +97,8 @@ body, button, input {
     top: 5rem;
     overflow: hidden;
     height: 0;
-    opacity: 0;
-    -webkit-transition: all 250ms;
-    transition: all 250ms;
+    -webkit-transition: height 250ms;
+    transition: height 250ms;
   }
   .menu__checkbox {
     position: absolute;
@@ -246,6 +253,37 @@ body, button, input {
   }
 }
 
+@media (min-width: 1024px) {
+  .intro {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    direction: rtl;
+    text-align: left;
+    place-items: center center;
+    overflow: hidden;
+  }
+  .intro__heading {
+    font-size: 4.5rem;
+    line-height: 5rem;
+    margin-bottom: 0rem;
+  }
+  .intro__paragraph {
+    margin-bottom: 1.5rem;
+  }
+  .intro__button {
+    padding: .55em 2em;
+  }
+  .intro__illustration {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    position: relative;
+    max-width: 35rem;
+    right: -5rem;
+  }
+}
+
 @media (min-width: 300px) {
   .tool {
     background: var(--dark_violet);
@@ -264,9 +302,11 @@ body, button, input {
     margin-left: -5%;
     width: 110%;
     margin-bottom: 1rem;
+    margin-bottom: 2rem;
     padding: .5em 1em;
     border-radius: .2rem;
     border: 3px solid transparent;
+    border: 3px solid var(--red);
     position: relative;
   }
   .tool__error--text {
@@ -276,7 +316,6 @@ body, button, input {
     color: var(--red);
     font-style: italic;
     font-size: 0.9rem;
-    display: none;
   }
   .tool__pattern {
     position: absolute;
@@ -303,6 +342,34 @@ body, button, input {
     cursor: pointer;
     -webkit-filter: brightness(1.1);
             filter: brightness(1.1);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tool {
+    padding: 3em 4em;
+  }
+  .tool__content_wrap {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 200px;
+        grid-template-columns: 1fr 200px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+  }
+  .tool__input {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .tool__pattern--mobile {
+    display: none;
+  }
+  .tool__pattern--desktop {
+    display: block;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -348,6 +415,30 @@ body, button, input {
     -webkit-filter: brightness(1.1);
             filter: brightness(1.1);
     opacity: 0.9;
+  }
+}
+
+@media (min-width: 1024px) {
+  .link_card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 300px 125px;
+        grid-template-columns: 1fr 300px 125px;
+    gap: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .link_card__input_link {
+    margin: 0;
+  }
+  .link_card__input_link::after {
+    display: none;
+  }
+  .link_card__output_link {
+    margin: 0;
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
 }
 
@@ -412,6 +503,63 @@ body, button, input {
   }
   .statistics__card__paragraph {
     color: var(--grayish_violet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .background_line {
+    width: 800px;
+    height: 8px;
+    left: 0;
+    top: 71%;
+  }
+  .statistics {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 200px 350px;
+        grid-template-rows: 200px 350px;
+    gap: 6rem;
+  }
+  .statistics__intro {
+    margin: 0;
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+  }
+  .statistics__intro__heading {
+    font-size: 2.75rem;
+    margin: 0;
+  }
+  .statistics__intro__paragraph {
+    max-width: 49%;
+  }
+  .statistics__card {
+    height: 80%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .statistics__card__wrap {
+    display: -ms-grid;
+    display: grid;
+    gap: 35px;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .statistics__card:nth-child(1) {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .statistics__card:nth-child(3) {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .statistics__card__icon {
+    width: 50px;
+    height: 50px;
+  }
+  .statistics__card__icon__background {
+    left: 45px;
   }
 }
 

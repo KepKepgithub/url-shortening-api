@@ -33,3 +33,33 @@
         }
     }
 }
+
+@media(min-width:1024px){
+
+    .intro{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        direction: rtl;
+        text-align: left;
+        place-items: center center;
+        overflow: hidden;
+
+        &__heading{
+            font-size: 4.5rem;
+            line-height: 5rem;
+            margin-bottom: 0rem;
+        }
+        &__paragraph{
+            margin-bottom: 1.5rem;
+        }
+        &__button{
+            padding: .55em 2em;
+        }
+        &__illustration{
+            justify-self: start;
+            position: relative;
+            max-width: 35rem;
+            right: -5rem;
+        }
+    }
+}
