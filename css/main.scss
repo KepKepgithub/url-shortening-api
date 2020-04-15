@@ -1,6 +1,11 @@
 @import "colors";
 @import "typography";
-
+// Global is page sizings and global paddings/margins
 @import "global";
+// Rest of the page styling is here
 @import "header";
 @import "menu";
+@import "intro";
+@import "tool";
+@import "link_card";
+@import "statistics";

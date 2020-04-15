@@ -1,0 +1,67 @@
+@media(min-width:300px){
+    .tool{
+        background: var(--dark_violet);
+        border-radius: .75rem;
+        position: relative;
+        padding: 2em;
+        text-align: center;
+        overflow: hidden;
+        
+        margin-bottom: 1.5rem;
+        // Puts the button and input ontop of the svg's at all times
+        &__content_wrap{
+            position: relative;
+            z-index: 1000;
+        }
+        &__input{
+            margin-left: -5%;
+            width: 110%;
+            // margin-bottom: 2rem; for when error pops up
+            margin-bottom: 1rem;
+            padding: .5em 1em;
+            border-radius: .2rem;
+            // border: 3px solid var(--red);
+            border: 3px solid transparent;
+
+            position: relative;
+        }
+        &__error{
+            &--text{
+                position: absolute;
+                top: 55px;
+                left: -10px;
+                color: var(--red);
+                font-style: italic;
+                font-size: 0.9rem;
+
+                display: none;
+            }
+        }
+        &__pattern{
+            position: absolute;
+            pointer-events: none;
+            &--desktop{
+                display: none;
+            }
+            &--mobile{
+                top: 0;
+                right: 0;
+            }
+        }
+        &__cta{
+            background: var(--cyan);
+            color: white;
+            font-weight: bold;
+            padding: .75em 0;
+            border-radius: .5rem;
+            border: none;
+            width: 110%;
+            margin-left: -5%;
+
+            &:hover{
+                cursor: pointer;
+                filter: brightness(1.1);
+            }
+        }
+    }
+}
