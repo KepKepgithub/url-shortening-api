@@ -4,174 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/main.css">
-  <!-- script needs to be on top  to convert img to svg-->
-  <script src="./JS/img_to_svg.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
 
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
 </head>
 <body>
 
-  <div class="background_gray"></div>
+  Features
+  Pricing
+  Resources
 
-  <div class="content_wrap">
-    <header class="header">
-      <img src="./logo/logo.svg" alt="icon-logo" class="header__logo" onload="SVGInject(this)">
-    
-      <input type="checkbox" name="menu__checkbox" id="menu__checkbox" class="menu__checkbox">
-      <label for="menu__checkbox" class="menu__label">
-        <div class="menu__icon"></div>
-      </label>
-    
-        <nav class="menu">
-          <ul>
-            <li class="menu__item">Features</li>
-            <li class="menu__item">Pricing</li>
-            <li class="menu__item">Resources</li>
-    
-            <li class="menu__item">Login</li>
-            <li class="menu__item">Sign Up</li>
-          </ul>
-        </nav>
-    </header>
+  Login
+  Sign Up
+
+  More than just shorter links
+
+  Build your brand’s recognition and get detailed insights 
+  on how your links are performing.
+
+  Get Started
+
+  Shorten It!
+
+  Advanced Statistics
+
+  Track how your links are performing across the web with our 
+  advanced statistics dashboard.
+
+  Brand Recognition
+
+  Boost your brand recognition with each click. Generic links don’t 
+  mean a thing. Branded links help instil confidence in your content.
+
+  Detailed Records
+
+  Gain insights into who is clicking your links. Knowing when and where 
+  people engage with your content helps inform better decisions.
+
+  Fully Customizable
+
+  Improve brand awareness and content discoverability through customizable 
+  links, supercharging audience engagement.
+
+  Boost your links today
+
+  Get Started
+
+  Features
+
+  Link Shortening
+  Branded Links
+  Analytics
+
+  Resources
+
+  Blog
+  Developers
+  Support
+
+  Company
+
+  About
+  Our Team
+  Careers
+  Contact
   
-      <section class="intro">
-        <img src="./illustrations/illustration-working.svg" alt="illustration-working" class="intro__illustration">
-        <div class="intro__text_wrap">
-        <h1 class="intro__heading">More than just shorter links</h1>
-        <p class="intro__paragraph">
-        Build your brand’s recognition and get detailed insights
-        on how your links are performing.
-        </p>
-        <button class="intro__button">Get Started</button></div>
-      </section>
-
-      <section class="tool">
-        <img src="./patterns/tool_pattern_mobile.svg" alt="pattern" class="tool__pattern tool__pattern--mobile">
-        <img src="./patterns/tool_pattern_desktop.svg" alt="pattern" class="tool__pattern tool__pattern--desktop">
-        <div class="tool__content_wrap">
-          <div class="tool__error">
-            <input type="url" name="tool__input" id="tool__input" class="tool__input" placeholder="Shorten a link here...">
-            <p class="tool__error--text">Please add a link</p>
-          </div>
-          <button class="tool__cta">Shorten It!</button>
-        </div>
-      </section>
-      
-      <section class="link_card__wrap">
-        <article class="link_card">
-          <p class="link_card__input_link">https://www.frontendmentor.io</p>
-          <p class="link_card__output_link">https://output/filler123</p>
-          <button class="link_card__cta">Copy</button>
-        </article>
-        <article class="link_card">
-          <p class="link_card__input_link">123</p>
-          <p class="link_card__output_link">123</p>
-          <button class="link_card__cta">123</button>
-        </article>
-        <article class="link_card">
-          <p class="link_card__input_link">123</p>
-          <p class="link_card__output_link">123</p>
-          <button class="link_card__cta">123</button>
-        </article>
-      </section>
-
-      <section class="statistics">
-
-        <div class="background_line"></div>
-
-        <div class="statistics__intro">
-          <h1 class="statistics__intro__heading">Advanced Statistics</h1>
-          <p class="statistics__intro__paragraph">
-            Track how your links are performing across the web with our 
-            advanced statistics dashboard.
-          </p>
-        </div>
-        
-        <div class="statistics__card__wrap">
-          <article class="statistics__card">
-            <div class="statistics__card__icon__background">
-              <img src="./icons/icon-brand-recognition.svg" alt="icon-brand-recognition" class="statistics__card__icon">
-            </div>
-            <h1 class="statistics__card__heading">Brand Recognition</h1>
-            <p class="statistics__card__paragraph">
-              Boost your brand recognition with each click. Generic links don’t 
-              mean a thing. Branded links help instil confidence in your content.
-            </p>
-          </article>
-        
-          <article class="statistics__card">
-            <div class="statistics__card__icon__background">
-              <img src="./icons/icon-detailed-records.svg" alt="icon-detailed-records" class="statistics__card__icon">
-            </div>
-            <h1 class="statistics__card__heading">Detailed Records</h1>
-            <p class="statistics__card__paragraph">
-              Gain insights into who is clicking your links. Knowing when and where 
-              people engage with your content helps inform better decisions.
-            </p>
-          </article>
-
-        <article class="statistics__card">
-          <div class="statistics__card__icon__background">
-            <img src="./icons/icon-fully-customizable.svg" alt="icon-fully-customizable" class="statistics__card__icon">
-          </div>
-            <h1 class="statistics__card__heading">Fully Customizable</h1>
-            <p class="statistics__card__paragraph">
-              Improve brand awareness and content discoverability through customizable 
-              links, supercharging audience engagement.
-            </p>
-          </article>
-        </div>
-
-      </section>
-    
-      <section class="boost">
-        <img src="./patterns/bg-boost-desktop.svg" alt="bg-boost-desktop" class="boost__pattern boost__pattern--desktop">
-        <img src="./patterns/bg-boost-mobile.svg" alt="bg-boost-mobile" class="boost__pattern boost__pattern--mobile">
-        <h1 class="boost__heading">Boost your links today</h1>
-        <button class="boost__cta">Get Started</button>
-      </section>
-
-      <footer class="footer">
-        <img src="./logo/logo.svg" alt="footer-logo" class="footer__logo" onload="SVGInject(this)">
-        
-        <article class="footer__article">
-          <h1 class="footer__article__heading">Features</h1>
-          <p class="footer__article__link">Link Shortening</p>
-          <p class="footer__article__link">Branded Links</p>
-          <p class="footer__article__link">Analytics</p>
-        </article>
-      
-        <article class="footer__article">
-          <h1 class="footer__article__heading">Resources</h1>
-          <p class="footer__article__link">Blog</p>
-          <p class="footer__article__link">Developers</p>
-          <p class="footer__article__link">Support</p>
-        </article>
-      
-        <article class="footer__article">
-          <h1 class="footer__article__heading">Company</h1>
-          <p class="footer__article__link">About</p>
-          <p class="footer__article__link">Our Team</p>
-          <p class="footer__article__link">Careers</p>
-          <p class="footer__article__link">Contact</p>
-        </article>
-
-        <article class="footer__social">
-          <img src="./icons/icon-facebook.svg" alt="icon-facebook" class="footer__social__icon" onload="SVGInject(this)">
-          <img src="./icons/icon-twitter.svg" alt="icon-twitter" class="footer__social__icon" onload="SVGInject(this)">
-          <img src="./icons/icon-pinterest.svg" alt="icon-pinterest" class="footer__social__icon" onload="SVGInject(this)">
-          <img src="./icons/icon-instagram.svg" alt="icon-instagram" class="footer__social__icon" onload="SVGInject(this)">
-        </article>
-      
-      </footer>
-      <!--
-      <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
-      </div> -->
-    </div>
-
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
 </body>
 </html>
