@@ -8,17 +8,30 @@ html(lang="en")
         title Frontend Mentor | Shortly URL shortening API Challenge
     body
         .page_wrap
-            header.header
-
-
-
-        //- Features
-        //- Pricing
-        //- Resources
-
-        //- Login
-        //- Sign Up
-
+            header.header#header
+                input(type="checkbox", name="menu__checkbox" id="menu__checkbox").menu__checkbox
+                img(src="./icons/logo.svg", alt="logo").header__logo
+                nav.menu
+                    ul
+                        li
+                            a(href="#").menu__item Features
+                        li
+                            a(href="#").menu__item Pricing
+                        li
+                            a(href="#").menu__item Resources
+                        li
+                            a(href="#").menu__item Login
+                        li
+                            a(href="#").menu__item Sign Up
+                label(for="menu__checkbox").menu__label
+                    .menu__icon
+            //- Header end
+            section.intro
+                img(src="illustrations/illustration-working.svg", alt="illustration").intro__illustration
+                .intro__text_wrap
+                    h1.intro__heading More than just shorter links
+                    p.intro__paragraph Build your brand’s recognition and get detailed insights on how your links are performing.
+                    a(href="#").intro__button Get Started
         //- More than just shorter links
 
         //- Build your brand’s recognition and get detailed insights 

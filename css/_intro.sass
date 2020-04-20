@@ -1,0 +1,59 @@
+// Mobile Portrait
+@media screen and ( min-width:300px)
+    .intro
+        display: flex
+        flex-direction: column
+        align-items: center
+        &__illustration
+            max-width: 50rem
+            width: 145%
+            margin: auto
+            margin-bottom: 3rem
+        &__text_wrap
+            text-align: center
+        &__heading
+            font-size: 4rem
+            line-height: 4.5rem
+            color: $very_dark_blue
+            margin-bottom: 1.5rem
+        &__paragraph
+            color: $grayish_violet
+            margin-bottom: 3.5rem
+        &__button
+            text-decoration: none
+            background: $cyan
+            color: white
+            padding: 1rem 3rem
+            font-weight: bold
+            font-size: 2rem
+            border-radius: 5rem
+            &:hover,&:active,&:focus
+                opacity: 0.5
+// Tablets Portrait
+@media screen and ( min-width:768px)
+    .intro
+        &__illustration
+            width: 100%
+        &__heading
+            font-size: 5rem
+        &__paragraph
+            font-size: 2rem
+// Tablet Landscape / Desktop
+@media screen and (min-width:1024px)
+    .intro
+        flex-direction: row-reverse
+        align-content: center
+        &__illustration
+            max-width: unset
+            margin: unset
+        &__text_wrap,&__illustration
+            flex: 1
+        &__text_wrap
+            text-align: left
+        &__heading
+            font-size: 7rem
+            line-height: 7.5rem
+        &__paragraph
+            font-size: 2.2rem
+            padding-right: 4.5rem
+            margin-bottom: 4rem

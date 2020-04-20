@@ -1,0 +1,116 @@
+// Mobile Portrait
+@media screen and ( min-width:300px  )
+    .menu
+        position: absolute
+        top: 8rem
+        right: 0
+        width: 100%
+        overflow: hidden
+        height: 0
+        transition: height 250ms ease
+        ul
+            list-style: none
+            display: flex
+            flex-direction: column
+            align-items: center
+            background: $dark_violet
+            padding: 3.5rem 0
+            border-radius: 1rem
+            max-width: 50rem
+            margin: 0 auto 0 auto
+
+            li
+                margin-bottom: 2rem
+                width: 90%
+                &:nth-last-child(1)
+                        margin-bottom: 0
+                        .menu__item
+                            background: $cyan
+                &:nth-last-child(3)
+                    margin-bottom: 6rem
+                    position: relative
+                    &::after
+                        width: 100%
+                        position: absolute
+                        content: ""
+                        height: .1rem
+                        background: $gray
+                        bottom: -3rem
+                    
+        &__item
+            display: block
+            color: white
+            text-decoration: none
+            font-weight: bold
+            background: $dark_violet
+            text-align: center
+            padding: 1rem 0
+            border-radius: 5rem
+
+            &:hover,&:active,&:focus
+                filter: brightness(1.1)
+        &__label
+            display: block
+            width: 25px
+            height: 25px
+            display: grid
+            place-content: center center
+            cursor: pointer
+        &__icon
+            width: 25px
+            height: 4px
+            background: $gray
+            position: relative
+            &::before,&::after
+                position: absolute
+                content: ""
+                width: inherit
+                height: inherit
+                background: $gray
+                top: -.8rem
+            &::after
+                top: .8rem
+        &__checkbox
+            opacity: 0
+            position: absolute
+            pointer-events: none
+        // Checkbox Logic
+        &__checkbox:checked ~ .menu
+            // Height Here doesn't matter,just has to be bigger than the actual menu
+            height: 50rem
+// Tablets Portrait
+@media screen and ( min-width:768px  )
+// Tablet Landscape / Desktop
+@media screen and ( min-width:1024px  )
+    .menu, .menu__checkbox:checked ~ .menu
+        position: unset
+        height: auto
+        ul
+            flex-direction: row
+            padding: 0
+            margin: 0
+            background: unset
+            max-width: unset
+            justify-content: flex-start
+            li
+                margin: 0
+                width: unset
+                &:nth-last-child(1)
+                    .menu__item
+                        color: white
+                &:nth-last-child(2)
+                    margin-left: auto
+                &:nth-last-child(3)
+                    margin-bottom: unset
+                    &::after
+                        display: none
+                    
+        &__item
+            background: unset
+            color: $grayish_violet
+            padding: 1rem 2rem
+            &:hover
+                filter: unset
+                color: $very_dark_violet
+        &__label
+            display: none

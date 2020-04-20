@@ -9,7 +9,27 @@
   </head>
   <body>
     <div class="page_wrap">
-      <header class="header"></header>
+      <header class="header" id="header">
+        <input class="menu__checkbox" type="checkbox" name="menu__checkbox" id="menu__checkbox"/><img class="header__logo" src="./icons/logo.svg" alt="logo"/>
+        <nav class="menu">
+          <ul>
+            <li><a class="menu__item" href="#">Features</a></li>
+            <li><a class="menu__item" href="#">Pricing</a></li>
+            <li><a class="menu__item" href="#">Resources</a></li>
+            <li><a class="menu__item" href="#">Login</a></li>
+            <li><a class="menu__item" href="#">Sign Up</a></li>
+          </ul>
+        </nav>
+        <label class="menu__label" for="menu__checkbox">
+          <div class="menu__icon"></div>
+        </label>
+      </header>
+      <section class="intro"><img class="intro__illustration" src="illustrations/illustration-working.svg" alt="illustration"/>
+        <div class="intro__text_wrap">
+          <h1 class="intro__heading">More than just shorter links</h1>
+          <p class="intro__paragraph">Build your brand’s recognition and get detailed insights on how your links are performing.</p><a class="intro__button" href="#">Get Started</a>
+        </div>
+      </section>
     </div>
   </body>
 </html>

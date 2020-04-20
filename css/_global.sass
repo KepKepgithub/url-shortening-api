@@ -3,17 +3,22 @@
     margin: 0
     box-sizing: border-box
 
-
+body
+    overflow-x: hidden
+// Mobile Portrait
 @media screen and ( min-width:300px  )
-    body
-        background: gray
     .page_wrap
-        max-width: 1440px
+        max-width: 144.4rem
         width: 100%
         margin: auto
         background: white
+        padding: 0 1.75rem
         
+// Tablets Portrait
 @media screen and ( min-width:768px  )
+    .page_wrap
+        padding: 0 8rem
+// Tablet Landscape / Desktop
 @media screen and ( min-width:1024px  )
-    
-    
+    .page_wrap
+        padding: 0 12rem
