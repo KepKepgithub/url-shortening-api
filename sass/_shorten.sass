@@ -1,0 +1,82 @@
+@media screen and ( min-width:300px  )
+    .shorten
+        background: $dark_violet
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 2.5rem 0
+        position: relative
+        border-radius: 1.25rem
+        overflow: hidden
+        &__error,&__button
+            position: relative
+            z-index: 100
+            width: 90%
+        &__input,&__button
+            padding: 1rem 1.5rem
+            border-radius: .75rem
+            border: none
+        &__input
+            width: 100%
+            border: 3px solid transparent
+            font-size: 1.7rem
+            margin-bottom: 1.5rem
+            &:invalid
+                box-shadow: none
+                border-color: $red
+                color: $red
+                margin-bottom: 3.5rem
+            &:invalid + .shorten__error_text
+                display: block
+        &__button
+            background: $cyan
+            color: white
+            font-weight: bold
+            font-size: 1.85rem
+            &:hover,&:active,&:focus
+                filter: brightness(1.1)
+                cursor: pointer
+        &__error_text
+            color: $red
+            font-style: italic
+            font-size: 1.5rem
+            position: absolute
+            bottom: 1.25rem
+            display: none
+        &__pattern
+            position: absolute
+            right: 0
+            top: 0
+            &--desktop
+                display: none
+// Tablets Portrait
+@media screen and ( min-width:768px  )
+// Tablet Landscape / Desktop
+@media screen and ( min-width:1024px  )
+    .shorten
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        padding: 4.5rem 2rem
+        &__error
+            width: 80%
+        &__input
+            margin: 0
+            &:invalid
+                box-shadow: none
+                border-color: $red
+                margin-bottom: 0rem
+        &__error_text
+            bottom: -2rem
+            left: 1rem
+        &__button
+            margin: 0
+            width: 15%
+            padding-right: 0
+            padding-left: 0
+        &__pattern
+            &--desktop
+                display: block
+                left: 0
+            &--mobile
+                display: none

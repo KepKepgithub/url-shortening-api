@@ -3,14 +3,14 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="icon", href="./icons/favicon-32x32.png")
+        link(rel="icon", href="./svg/icons/favicon-32x32.png")
         link(rel="stylesheet", href="./css/main.css")
         title Frontend Mentor | Shortly URL shortening API Challenge
     body
         .page_wrap
             header.header#header
                 input(type="checkbox", name="menu__checkbox" id="menu__checkbox").menu__checkbox
-                img(src="./icons/logo.svg", alt="logo").header__logo
+                img(src="./svg/logo/logo.svg", alt="logo").header__logo
                 nav.menu
                     ul
                         li
@@ -27,13 +27,20 @@ html(lang="en")
                     .menu__icon
             //- Header end
             section.intro
-                img(src="illustrations/illustration-working.svg", alt="illustration").intro__illustration
+                img(src="./svg/illustrations/illustration-working.svg", alt="illustration").intro__illustration
                 .intro__text_wrap
                     h1.intro__heading More than just shorter links
                     p.intro__paragraph Build your brand’s recognition and get detailed insights on how your links are performing.
-                    a(href="#main").intro__button Get Started
+                    a(href="#tool").intro__button Get Started
             //- intro end
-            main.main#main
+            main.shorten#tool
+                .gray_background
+                img(src="./svg/patterns/bg-shorten-desktop.svg", alt="pattern").shorten__pattern.shorten__pattern--desktop
+                img(src="./svg/patterns/bg-shorten-mobile.svg", alt="pattenr").shorten__pattern.shorten__pattern--mobile
+                .shorten__error
+                    input(type="url", name="shortening_input", placeholder="Shorten a link here...").shorten__input
+                    p.shorten__error_text please add a link
+                button.shorten__button Shorten it!
         //- More than just shorter links
 
         //- Build your brand’s recognition and get detailed insights 

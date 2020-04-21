@@ -37,7 +37,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .page_wrap {
-    padding: 0 12rem;
+    padding: 0 16.5rem;
   }
 }
 @media screen and (min-width: 300px) {
@@ -191,6 +191,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 8rem;
   }
   .intro__illustration {
     max-width: 50rem;
@@ -258,6 +259,105 @@ body {
     font-size: 2.2rem;
     padding-right: 4.5rem;
     margin-bottom: 4rem;
+  }
+}
+@media screen and (min-width: 300px) {
+  .shorten {
+    background: #3b3054;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 0;
+    position: relative;
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
+  .shorten__error, .shorten__button {
+    position: relative;
+    z-index: 100;
+    width: 90%;
+  }
+  .shorten__input, .shorten__button {
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    border: none;
+  }
+  .shorten__input {
+    width: 100%;
+    border: 3px solid transparent;
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+  .shorten__input:invalid {
+    box-shadow: none;
+    border-color: #f46262;
+    color: #f46262;
+    margin-bottom: 3.5rem;
+  }
+  .shorten__input:invalid + .shorten__error_text {
+    display: block;
+  }
+  .shorten__button {
+    background: #2acfcf;
+    color: white;
+    font-weight: bold;
+    font-size: 1.85rem;
+  }
+  .shorten__button:hover, .shorten__button:active, .shorten__button:focus {
+    filter: brightness(1.1);
+    cursor: pointer;
+  }
+  .shorten__error_text {
+    color: #f46262;
+    font-style: italic;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 1.25rem;
+    display: none;
+  }
+  .shorten__pattern {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .shorten__pattern--desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .shorten {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.5rem 2rem;
+  }
+  .shorten__error {
+    width: 80%;
+  }
+  .shorten__input {
+    margin: 0;
+  }
+  .shorten__input:invalid {
+    box-shadow: none;
+    border-color: #f46262;
+    margin-bottom: 0rem;
+  }
+  .shorten__error_text {
+    bottom: -2rem;
+    left: 1rem;
+  }
+  .shorten__button {
+    margin: 0;
+    width: 15%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .shorten__pattern--desktop {
+    display: block;
+    left: 0;
+  }
+  .shorten__pattern--mobile {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

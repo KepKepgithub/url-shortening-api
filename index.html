@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="./icons/favicon-32x32.png"/>
+    <link rel="icon" href="./svg/icons/favicon-32x32.png"/>
     <link rel="stylesheet" href="./css/main.css"/>
     <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
   </head>
   <body>
     <div class="page_wrap">
       <header class="header" id="header">
-        <input class="menu__checkbox" type="checkbox" name="menu__checkbox" id="menu__checkbox"/><img class="header__logo" src="./icons/logo.svg" alt="logo"/>
+        <input class="menu__checkbox" type="checkbox" name="menu__checkbox" id="menu__checkbox"/><img class="header__logo" src="./svg/logo/logo.svg" alt="logo"/>
         <nav class="menu">
           <ul>
             <li><a class="menu__item" href="#">Features</a></li>
@@ -24,13 +24,20 @@
           <div class="menu__icon"></div>
         </label>
       </header>
-      <section class="intro"><img class="intro__illustration" src="illustrations/illustration-working.svg" alt="illustration"/>
+      <section class="intro"><img class="intro__illustration" src="./svg/illustrations/illustration-working.svg" alt="illustration"/>
         <div class="intro__text_wrap">
           <h1 class="intro__heading">More than just shorter links</h1>
-          <p class="intro__paragraph">Build your brand’s recognition and get detailed insights on how your links are performing.</p><a class="intro__button" href="#main">Get Started</a>
+          <p class="intro__paragraph">Build your brand’s recognition and get detailed insights on how your links are performing.</p><a class="intro__button" href="#tool">Get Started</a>
         </div>
       </section>
-      <main class="main" id="main"></main>
+      <main class="shorten" id="tool">
+        <div class="gray_background"></div><img class="shorten__pattern shorten__pattern--desktop" src="./svg/patterns/bg-shorten-desktop.svg" alt="pattern"/><img class="shorten__pattern shorten__pattern--mobile" src="./svg/patterns/bg-shorten-mobile.svg" alt="pattenr"/>
+        <div class="shorten__error">
+          <input class="shorten__input" type="url" name="shortening_input" placeholder="Shorten a link here..."/>
+          <p class="shorten__error_text">please add a link</p>
+        </div>
+        <button class="shorten__button">Shorten it!</button>
+      </main>
     </div>
   </body>
 </html>
