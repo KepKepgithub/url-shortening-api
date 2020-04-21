@@ -8,14 +8,13 @@ body {
 }
 
 body, button, input {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -31,41 +30,30 @@ body {
     padding: 0 1.75rem;
   }
 }
-
 @media screen and (min-width: 768px) {
   .page_wrap {
     padding: 0 8rem;
   }
 }
-
 @media screen and (min-width: 1024px) {
   .page_wrap {
     padding: 0 12rem;
   }
 }
-
 @media screen and (min-width: 300px) {
   .header {
     padding: 2.5rem 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
   }
 }
-
 @media screen and (min-width: 768px) {
   .header__logo {
     margin-right: 2rem;
   }
 }
-
 @media screen and (min-width: 300px) {
   .menu {
     position: absolute;
@@ -74,21 +62,13 @@ body {
     width: 100%;
     overflow: hidden;
     height: 0;
-    -webkit-transition: height 250ms ease;
     transition: height 250ms ease;
   }
   .menu ul {
     list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
     background: #3b3054;
     padding: 3.5rem 0;
     border-radius: 1rem;
@@ -113,7 +93,7 @@ body {
     width: 100%;
     position: absolute;
     content: "";
-    height: .1rem;
+    height: 0.1rem;
     background: #bfbfbf;
     bottom: -3rem;
   }
@@ -128,14 +108,12 @@ body {
     border-radius: 5rem;
   }
   .menu__item:hover, .menu__item:active, .menu__item:focus {
-    -webkit-filter: brightness(1.1);
-            filter: brightness(1.1);
+    filter: brightness(1.1);
   }
   .menu__label {
     display: block;
     width: 25px;
     height: 25px;
-    display: -ms-grid;
     display: grid;
     place-content: center center;
     cursor: pointer;
@@ -152,10 +130,10 @@ body {
     width: inherit;
     height: inherit;
     background: #bfbfbf;
-    top: -.8rem;
+    top: -0.8rem;
   }
   .menu__icon::after {
-    top: .8rem;
+    top: 0.8rem;
   }
   .menu__checkbox {
     opacity: 0;
@@ -166,24 +144,18 @@ body {
     height: 50rem;
   }
 }
-
 @media screen and (min-width: 1024px) {
   .menu, .menu__checkbox:checked ~ .menu {
     position: unset;
     height: auto;
   }
   .menu ul, .menu__checkbox:checked ~ .menu ul {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     padding: 0;
     margin: 0;
     background: unset;
     max-width: unset;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
   .menu ul li, .menu__checkbox:checked ~ .menu ul li {
     margin: 0;
@@ -207,27 +179,18 @@ body {
     padding: 1rem 2rem;
   }
   .menu__item:hover, .menu__checkbox:checked ~ .menu__item:hover {
-    -webkit-filter: unset;
-            filter: unset;
+    filter: unset;
     color: #232127;
   }
   .menu__label, .menu__checkbox:checked ~ .menu__label {
     display: none;
   }
 }
-
 @media screen and (min-width: 300px) {
   .intro {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   .intro__illustration {
     max-width: 50rem;
@@ -261,7 +224,6 @@ body {
     opacity: 0.5;
   }
 }
-
 @media screen and (min-width: 768px) {
   .intro__illustration {
     width: 100%;
@@ -273,24 +235,17 @@ body {
     font-size: 2rem;
   }
 }
-
 @media screen and (min-width: 1024px) {
   .intro {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    flex-direction: row-reverse;
+    align-content: center;
   }
   .intro__illustration {
     max-width: unset;
     margin: unset;
   }
   .intro__text_wrap, .intro__illustration {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
   }
   .intro__text_wrap {
     text-align: left;
