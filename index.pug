@@ -1,3 +1,6 @@
+include #mixin.pug
+
+
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -12,17 +15,11 @@ html(lang="en")
                 input(type="checkbox", name="menu__checkbox" id="menu__checkbox").menu__checkbox
                 img(src="./svg/logo/logo.svg", alt="logo").header__logo
                 nav.menu
-                    ul
-                        li
-                            a(href="#").menu__item Features
-                        li
-                            a(href="#").menu__item Pricing
-                        li
-                            a(href="#").menu__item Resources
-                        li
-                            a(href="#").menu__item Login
-                        li
-                            a(href="#").menu__item Sign Up
+                    a(href="#").menu__item Features
+                    a(href="#").menu__item Pricing
+                    a(href="#").menu__item Resources
+                    a(href="#").menu__item Login
+                    a(href="#").menu__item Sign Up
                 label(for="menu__checkbox").menu__label
                     .menu__icon
             //- Header end
@@ -41,15 +38,11 @@ html(lang="en")
                     input(type="url", name="shortening_input", placeholder="Shorten a link here...").shorten__input
                     p.shorten__error_text please add a link
                 button.shorten__button Shorten it!
-        //- More than just shorter links
-
-        //- Build your brand’s recognition and get detailed insights 
-        //- on how your links are performing.
-
-        //- Get Started
-
-        //- Shorten It!
-
+            section.link_card__wrap
+                +link_card
+                +link_card
+                +link_card
+            section.statistics
         //- Advanced Statistics
 
         //- Track how your links are performing across the web with our 

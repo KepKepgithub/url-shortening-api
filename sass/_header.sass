@@ -2,14 +2,15 @@
 @media screen and ( min-width:300px  )
     .header
         padding: 2.5rem 0
-        display: flex
+        display: grid
+        grid-template-columns: 1fr 1fr
         align-items: center
-        justify-content: space-between
         // Relative for mobile menu positioning
         position: relative
 // Tablets Portrait
 @media screen and ( min-width:768px  )
-    .header__logo
-        margin-right: 2rem
 // Tablet Landscape / Desktop
 @media screen and ( min-width:1024px  )
+    .header
+        grid-template-columns: auto 1fr
+        gap: 20px

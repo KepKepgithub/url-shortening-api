@@ -43,144 +43,139 @@ body {
 @media screen and (min-width: 300px) {
   .header {
     padding: 2.5rem 0;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
     position: relative;
   }
 }
-@media screen and (min-width: 768px) {
-  .header__logo {
-    margin-right: 2rem;
+@media screen and (min-width: 1024px) {
+  .header {
+    grid-template-columns: auto 1fr;
+    gap: 20px;
   }
 }
 @media screen and (min-width: 300px) {
   .menu {
     position: absolute;
-    top: 8rem;
+    top: 8.5rem;
     right: 0;
-    width: 100%;
-    overflow: hidden;
-    height: 0;
-    transition: height 250ms ease;
-  }
-  .menu ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background: #3b3054;
-    padding: 3.5rem 0;
-    border-radius: 1rem;
-    max-width: 50rem;
-    margin: 0 auto 0 auto;
-  }
-  .menu ul li {
-    margin-bottom: 2rem;
-    width: 90%;
-  }
-  .menu ul li:nth-last-child(1) {
-    margin-bottom: 0;
-  }
-  .menu ul li:nth-last-child(1) .menu__item {
-    background: #2acfcf;
-  }
-  .menu ul li:nth-last-child(3) {
-    margin-bottom: 6rem;
-    position: relative;
-  }
-  .menu ul li:nth-last-child(3)::after {
     width: 100%;
-    position: absolute;
-    content: "";
-    height: 0.1rem;
-    background: #bfbfbf;
-    bottom: -3rem;
+    max-width: 55rem;
+    border-radius: 2rem;
+    display: grid;
+    place-items: center center;
+    gap: 0.5rem;
+    height: 0;
+    overflow: hidden;
+    transition: height 250ms ease, padding 250ms ease;
   }
   .menu__item {
     display: block;
-    color: white;
     text-decoration: none;
-    font-weight: bold;
+    color: white;
     background: #3b3054;
-    text-align: center;
-    padding: 1rem 0;
+    width: 85%;
+    padding: 2rem 0;
     border-radius: 5rem;
+    display: grid;
+    place-items: center center;
   }
   .menu__item:hover, .menu__item:active, .menu__item:focus {
-    filter: brightness(1.1);
+    filter: brightness(1.15);
+  }
+  .menu__item:nth-last-child(3) {
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  .menu__item:nth-last-child(3)::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.1rem;
+    background: white;
+    bottom: -1.7rem;
+  }
+  .menu__item:nth-last-child(1) {
+    background: #2acfcf;
+    color: white;
   }
   .menu__label {
-    display: block;
-    width: 25px;
-    height: 25px;
-    display: grid;
-    place-content: center center;
+    width: 3.5rem;
+    height: 3.5rem;
+    justify-self: end;
     cursor: pointer;
+    display: grid;
+    place-items: center center;
   }
   .menu__icon {
-    width: 25px;
-    height: 4px;
+    width: 100%;
+    height: 0.45rem;
     background: #bfbfbf;
     position: relative;
   }
   .menu__icon::before, .menu__icon::after {
-    position: absolute;
     content: "";
+    position: absolute;
     width: inherit;
     height: inherit;
-    background: #bfbfbf;
-    top: -0.8rem;
+    background: inherit;
+    top: -10px;
   }
   .menu__icon::after {
-    top: 0.8rem;
+    top: 10px;
   }
   .menu__checkbox {
-    opacity: 0;
     position: absolute;
+    opacity: 0;
     pointer-events: none;
   }
   .menu__checkbox:checked ~ .menu {
-    height: 50rem;
+    padding: 3.5rem 0;
+    height: 45.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    left: calc( 50% - 22.5rem );
   }
 }
 @media screen and (min-width: 1024px) {
   .menu, .menu__checkbox:checked ~ .menu {
     position: unset;
+    top: unset;
+    left: unset;
     height: auto;
-  }
-  .menu ul, .menu__checkbox:checked ~ .menu ul {
-    flex-direction: row;
-    padding: 0;
-    margin: 0;
+    padding: unset;
+    gap: unset;
     background: unset;
-    max-width: unset;
-    justify-content: flex-start;
-  }
-  .menu ul li, .menu__checkbox:checked ~ .menu ul li {
-    margin: 0;
     width: unset;
-  }
-  .menu ul li:nth-last-child(1) .menu__item, .menu__checkbox:checked ~ .menu ul li:nth-last-child(1) .menu__item {
-    color: white;
-  }
-  .menu ul li:nth-last-child(2), .menu__checkbox:checked ~ .menu ul li:nth-last-child(2) {
-    margin-left: auto;
-  }
-  .menu ul li:nth-last-child(3), .menu__checkbox:checked ~ .menu ul li:nth-last-child(3) {
-    margin-bottom: unset;
-  }
-  .menu ul li:nth-last-child(3)::after, .menu__checkbox:checked ~ .menu ul li:nth-last-child(3)::after {
-    display: none;
+    max-width: unset;
+    grid-template-columns: repeat(3, -webkit-min-content) 1fr repeat(2, -webkit-min-content);
+    grid-template-columns: repeat(3, min-content) 1fr repeat(2, min-content);
+    gap: 20px;
   }
   .menu__item, .menu__checkbox:checked ~ .menu__item {
+    width: unset;
     background: unset;
-    color: #9e9aa7;
-    padding: 1rem 2rem;
+    padding: unset;
+    color: #bfbfbf;
+    width: 100%;
   }
-  .menu__item:hover, .menu__checkbox:checked ~ .menu__item:hover {
-    filter: unset;
-    color: #232127;
+  .menu__item:nth-last-child(3), .menu__checkbox:checked ~ .menu__item:nth-last-child(3) {
+    margin: 0;
+  }
+  .menu__item:nth-last-child(3)::after, .menu__checkbox:checked ~ .menu__item:nth-last-child(3)::after {
+    display: none;
+  }
+  .menu__item:nth-last-child(1), .menu__checkbox:checked ~ .menu__item:nth-last-child(1) {
+    width: 10rem;
+    padding: 0.5rem 0;
+    grid-column: -1/-2;
+  }
+  .menu__item:nth-last-child(2), .menu__checkbox:checked ~ .menu__item:nth-last-child(2) {
+    grid-column: -2/-3;
   }
   .menu__label, .menu__checkbox:checked ~ .menu__label {
     display: none;
