@@ -1,0 +1,87 @@
+// Mobile portrait
+@media(min-width: 300px)
+    .statistics
+        padding: 10rem 0 0 0
+        &__intro,&__card
+            text-align: center
+        &__intro
+            margin-bottom: 8rem
+            &__heading
+                color: $very_dark_violet
+                margin-bottom: 2rem
+                font-size: 3rem
+                letter-spacing: -.1rem
+            &__paragraph
+                color: $grayish_violet
+        &__card_wrap
+            display: grid
+            gap: 8rem
+        &__card
+            background: white
+            position: relative
+            padding: 8rem 1.65rem 4rem 1.65rem
+            border-radius: .75rem
+            &::after
+               position: absolute
+               content: ""
+               width: .8rem
+               height: 8rem
+               background: $cyan
+               bottom: -8rem
+               left: calc( 50% - .4rem )
+            &:nth-last-child(1)
+                &::after
+                    display: none
+            &__icon_wrap
+                background: $dark_violet
+                position: absolute
+                width: 8rem
+                height: 8rem
+                border-radius: 50%
+                top: -4rem
+                left: calc( 50% - 4rem )
+
+                display: grid
+                place-items: center center
+            &__heading
+                color: $very_dark_violet
+                margin-bottom: 1.5rem
+            &__paragraph
+                color: $grayish_violet
+
+// Tablet/Landscape
+@media(min-width: 768px)
+
+// Desktop
+@media(min-width: 1024px)
+    .statistics
+        &__card_wrap
+            grid-template-columns: repeat(auto-fit,minmax(30rem,1fr))
+            gap: 4rem
+        &__card:nth-last-child(1)
+            grid-column: 1/-1
+@media(min-width: 1310px)
+    .statistics__card_wrap
+        gap: 4rem
+    .statistics__card
+        max-height: 30.2rem
+        &:nth-child(2)
+            margin-top: 4rem
+        &:nth-child(3)
+            margin-top: 8rem
+        &:nth-child(1),&:nth-child(2)
+            &::after
+               width: 8rem
+               height: .8rem
+               bottom: calc( 50% - .4rem)
+               left: 100% 
+        &:nth-child(2)
+            &::after
+                bottom: calc( 50% - .4rem + 4rem)
+        &:nth-child(3)
+            grid-column: unset
+            
+            
+        
+    
+            

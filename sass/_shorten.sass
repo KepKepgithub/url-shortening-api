@@ -1,10 +1,22 @@
 @media screen and ( min-width:300px  )
+    .gray_background
+        position: absolute
+        z-index: -1
+        width: 200%
+        height: 100%
+        top: 8.45rem
+        left: -50%
+        background: $gray
+        opacity: 0.3
+        &__wrap
+            position: relative
     .shorten
         background: $dark_violet
-        display: flex
-        flex-direction: column
-        align-items: center
+        display: grid
+        place-items: center center
+        gap: 2rem
         padding: 2.5rem 0
+        margin-bottom: 2rem
         position: relative
         border-radius: 1.25rem
         overflow: hidden
@@ -20,7 +32,6 @@
             width: 100%
             border: 3px solid transparent
             font-size: 1.7rem
-            margin-bottom: 1.5rem
             &:invalid
                 box-shadow: none
                 border-color: $red
@@ -33,6 +44,8 @@
             color: white
             font-weight: bold
             font-size: 1.85rem
+            // Need this only so it's the same size as input field
+            border: 3px solid transparent
             &:hover,&:active,&:focus
                 filter: brightness(1.1)
                 cursor: pointer
@@ -54,12 +67,11 @@
 // Tablet Landscape / Desktop
 @media screen and ( min-width:1024px  )
     .shorten
-        flex-direction: row
-        align-items: center
-        justify-content: space-between
+        grid-template-columns: 1fr 17rem
+        gap: 2rem
         padding: 4.5rem 2rem
         &__error
-            width: 80%
+            width: 100%
         &__input
             margin: 0
             &:invalid
@@ -70,8 +82,8 @@
             bottom: -2rem
             left: 1rem
         &__button
+            width: 100%
             margin: 0
-            width: 15%
             padding-right: 0
             padding-left: 0
         &__pattern

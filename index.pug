@@ -31,38 +31,28 @@ html(lang="en")
                     p.intro__paragraph Build your brand’s recognition and get detailed insights on how your links are performing.
                     a(href="#tool").intro__button Get Started
             //- intro end
-            main.shorten#tool
+            .gray_background__wrap
                 .gray_background
-                img(src="./svg/patterns/bg-shorten-desktop.svg", alt="pattern").shorten__pattern.shorten__pattern--desktop
-                img(src="./svg/patterns/bg-shorten-mobile.svg", alt="pattenr").shorten__pattern.shorten__pattern--mobile
-                .shorten__error
-                    input(type="url", name="shortening_input", placeholder="Shorten a link here...").shorten__input
-                    p.shorten__error_text please add a link
-                button.shorten__button Shorten it!
-            section.link_card__wrap
-                +link_card
-                +link_card
-                +link_card
-            section.statistics
-        //- Advanced Statistics
-
-        //- Track how your links are performing across the web with our 
-        //- advanced statistics dashboard.
-
-        //- Brand Recognition
-
-        //- Boost your brand recognition with each click. Generic links don’t 
-        //- mean a thing. Branded links help instil confidence in your content.
-
-        //- Detailed Records
-
-        //- Gain insights into who is clicking your links. Knowing when and where 
-        //- people engage with your content helps inform better decisions.
-
-        //- Fully Customizable
-
-        //- Improve brand awareness and content discoverability through customizable 
-        //- links, supercharging audience engagement.
+                main.shorten#tool
+                    img(src="./svg/patterns/bg-shorten-desktop.svg", alt="pattern").shorten__pattern.shorten__pattern--desktop
+                    img(src="./svg/patterns/bg-shorten-mobile.svg", alt="pattenr").shorten__pattern.shorten__pattern--mobile
+                    .shorten__error
+                        input(type="url", name="shortening_input", placeholder="Shorten a link here...").shorten__input
+                        p.shorten__error_text please add a link
+                    button.shorten__button Shorten it!
+                section.link_card__wrap
+                    +link_card
+                    +link_card
+                    +link_card
+                section.statistics
+                    .statistics__intro
+                        h1.statistics__intro__heading Advanced Statistics
+                        p.statistics__intro__paragraph Track how your links are performing across the web with our advanced statistics dashboard.
+                    //- Icon,Heading,Paragraph
+                    .statistics__card_wrap
+                        +statistics_card("./svg/icons/icon-brand-recognition.svg", "Brand Recognition", "Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.")
+                        +statistics_card("./svg/icons/icon-detailed-records.svg", "Detailed Records", "Gain insights into who is clicking your links. Knowing when and where  people engage with your content helps inform better decisions.")
+                        +statistics_card("./svg/icons/icon-fully-customizable.svg", "Fully costumizable", "Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.")
 
         //- Boost your links today
 

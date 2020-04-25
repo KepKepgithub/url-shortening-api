@@ -1,0 +1,56 @@
+// Mobile portrait
+@media(min-width: 300px)
+    .link_card
+        background: white
+        display: grid
+        gap: 1.5rem
+        border-radius: 1.5rem
+        padding: 1.5rem
+        &__wrap
+            display: grid
+            gap: 2rem
+        a
+            text-decoration: none
+        &__input_link
+            color: $very_dark_violet
+            margin-bottom: 2rem
+            position: relative
+            &::after
+                content: ""
+                position: absolute
+                width: 100%
+                height: .1rem
+                background: lightgray
+                left: 0
+                bottom: -2rem
+        &__output_link
+            color: $cyan
+        &__button
+            font-weight: bold
+            font-size: 1.75rem
+            color: white
+            background: $cyan
+            border: none
+            border-radius: 1rem
+            padding: 1rem 0
+            &:hover, &:active, &:focus
+                cursor: pointer
+                filter: brightness(1.15)
+// Tablet/Landscape
+@media(min-width: 768px)
+    .link_card
+        place-content: center center
+// Desktop
+@media(min-width: 1024px)
+    .link_card
+        gap: 2rem
+        grid-template-columns: min-content 1fr min-content
+        align-items: center
+        &__input_link
+            margin: 0
+            &::after
+                display: none
+        &__output_link
+            justify-self: end
+        &__button
+            width: 12rem

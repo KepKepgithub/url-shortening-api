@@ -1,5 +1,12 @@
 mixin link_card
     .link_card
-        a.link_card__input_link https://frontendmentor.io
-        a.link_card__output_link https://outputlink.sasdqwe
+        a(href="#").link_card__input_link https://frontendmentor.io
+        a(href="#").link_card__output_link https://outputlink.sasdqwe2222222
         button.link_card__button Copy
+
+mixin statistics_card(icon, heading, paragraph)
+    .statistics__card
+        .statistics__card__icon_wrap
+            img.statistis__card__icon(src= icon, alt="icon")
+        h1.statistics__card__heading=heading
+        p.statistics__card__paragraph=paragraph
