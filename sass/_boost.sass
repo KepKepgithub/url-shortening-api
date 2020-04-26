@@ -1,0 +1,57 @@
+// Mobile portrait
+@media(min-width: 1px)
+    .violet_background 
+        position: absolute
+        z-index: -1
+        width: 200%
+        height: 100%
+        left: -50%
+        background: $dark_violet
+        &__wrap
+            position: relative
+    .boost
+        display: grid
+        place-items: center center
+        padding: 9.1rem 0
+        position: relative
+        &__pattern
+            position: absolute
+            &--desktop
+                display: none
+            &--mobile
+                right: -1.75rem
+                top: 0
+        &__heading,&__button
+            z-index: 1
+        &__heading
+            color: white
+            font-weight: bold
+            font-size: 3rem
+            margin-bottom: 2rem
+        &__button
+            text-decoration: none
+            background: $cyan
+            color: white
+            padding: 1.25rem 5.5rem
+            font-weight: bold
+            border-radius: 5rem
+            &:hover, &:active, &:focus
+                cursor: pointer
+                filter: brightness(1.15)
+// Tablet and mobile landscape
+@media(min-width: 768px)
+    .boost__pattern--mobile
+        right: -8rem
+// Desktop
+@media(min-width: 1024px)
+    .boost
+        padding: 5.9rem 0
+        &__pattern
+            &--desktop
+                display: block
+                top: 0
+                right: -16.5rem
+            &--mobile
+                display: none
+        &__heading
+            font-size: 4rem
