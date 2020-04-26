@@ -27,6 +27,7 @@ body {
     width: 100%;
     margin: auto;
     padding: 0 1.75rem;
+    overflow-x: hidden;
   }
 }
 @media screen and (min-width: 768px) {
