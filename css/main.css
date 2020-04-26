@@ -453,7 +453,7 @@ body {
   }
   .statistics__intro__heading {
     color: #232127;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 3rem;
     letter-spacing: -0.1rem;
   }
@@ -499,6 +499,16 @@ body {
   }
   .statistics__card__paragraph {
     color: #9e9aa7;
+  }
+}
+@media (min-width: 768px) {
+  .statistics__intro {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .statistics__intro__heading {
+    font-size: 4rem;
   }
 }
 @media (min-width: 1024px) {
