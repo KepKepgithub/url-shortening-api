@@ -500,7 +500,7 @@ body {
     color: #9e9aa7;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   .statistics__card_wrap {
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 4rem;
@@ -509,7 +509,7 @@ body {
     grid-column: 1/-1;
   }
 }
-@media (min-width: 1310px) {
+@media (min-width: 81.875em) {
   .statistics__card_wrap {
     gap: 4rem;
   }
