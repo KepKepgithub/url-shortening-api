@@ -1,5 +1,5 @@
 // Mobile portrait
-@media(min-width: 300px)
+@media(min-width: 1px)
     .statistics
         padding: 10rem 0 0 0
         &__intro,&__card
@@ -53,8 +53,7 @@
 @media(min-width: 768px)
 
 // Desktop
-// 64em = 1024px
-@media(min-width: 64em)
+@media( min-width: 1024px  )
     .statistics
         &__card_wrap
             grid-template-columns: repeat(auto-fit,minmax(30rem,1fr))
@@ -62,8 +61,7 @@
         &__card:nth-last-child(1)
             grid-column: 1/-1
 
-// 81.875em = 1310px
-@media(min-width: 81.875em)
+@media( min-width: 1310px  )
     .statistics__card_wrap
         gap: 4rem
     .statistics__card
