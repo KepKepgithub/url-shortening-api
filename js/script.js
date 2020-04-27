@@ -1,12 +1,15 @@
-fetch("https://rel.ink/api/links/", {
-    method: 'POST',
-    headers: {
-        'Content-type': 'application/json'
-    },
-    body: JSON.stringify({
-        url: "https://www.youtube.com/watch?v=cuEtnrL9-H0"
-    })
-}).then(res => res.json()).then(data => console.log(data))
+
+// sends input link to api for shortening
+    // fetch("https://rel.ink/api/links/", {
+    // method: 'POST',
+    // headers: {
+    //     'Content-type': 'application/json'
+    // },
+    // body: JSON.stringify({
+    //     url: input.value
+    // })
+    // }).then(res => res.json()).then(data => console.log(data))
+// recieves the data and outputs a clickable shortened link
 
 const input = document.querySelector(".shorten__input");
 const button = document.querySelector(".shorten__button");
@@ -34,12 +37,26 @@ button.onclick = ()=>{
         // if valid do this
         if(input.checkValidity() === true){
             console.log(button_presses);
+            fetch("https://rel.ink/api/links/", {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify({
+                    url: input.value
+                })
+                }).then(res => res.json()).then(data =>{
+                    new_link = "https://rel.ink/" + data.hashid;
+                    link_card_output[button_presses].innerHTML = new_link;
+                    link_card_output[button_presses].href = new_link;
+                    console.log(data);
+                });
             button_presses++;
             if(button_presses > 2){
                 button_presses = 0;
             }
-            link_card[button_presses].style.display = "grid"
-            link_card_input[button_presses].innerHTML = input.value
+            link_card[button_presses].style.display = "grid";
+            link_card_input[button_presses].innerHTML = input.value;
         }
         // else this
         else{
