@@ -302,9 +302,10 @@ body {
     box-shadow: none;
     border-color: #f46262;
     color: #f46262;
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.5rem;
   }
   .shorten__input:invalid + .shorten__error_text {
+    bottom: -1rem;
     display: block;
   }
   .shorten__button {
@@ -352,6 +353,10 @@ body {
     border-color: #f46262;
     margin-bottom: 0rem;
   }
+  .shorten__input:invalid:invalid + .shorten__error_text {
+    bottom: -2.5rem;
+    display: block;
+  }
   .shorten__error_text {
     bottom: -2rem;
     left: 1rem;
@@ -377,6 +382,7 @@ body {
     gap: 1.5rem;
     border-radius: 1.5rem;
     padding: 1.5rem;
+    display: none;
   }
   .link_card__wrap {
     display: grid;

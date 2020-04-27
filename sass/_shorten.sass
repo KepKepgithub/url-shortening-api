@@ -36,8 +36,9 @@
                 box-shadow: none
                 border-color: $red
                 color: $red
-                margin-bottom: 3.5rem
+                margin-bottom: 1.5rem
             &:invalid + .shorten__error_text
+                bottom: -1rem
                 display: block
         &__button
             background: $cyan
@@ -78,6 +79,9 @@
                 box-shadow: none
                 border-color: $red
                 margin-bottom: 0rem
+                &:invalid + .shorten__error_text
+                    bottom: -2.5rem
+                    display: block
         &__error_text
             bottom: -2rem
             left: 1rem
