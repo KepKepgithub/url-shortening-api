@@ -79,15 +79,15 @@ link_copy.forEach((e,i) => {
             e.innerHTML = 'Copy';
         })
         switch(i){
-            case i = 0:
+            case 0:
                 link_copy[i].style.backgroundColor = "hsl(257, 27%, 26%)";
                 link_copy[i].innerHTML = "Copied!";
                 break;
-            case i = 1:
+            case 1:
                 link_copy[i].style.backgroundColor = "hsl(257, 27%, 26%)";
                 link_copy[i].innerHTML = "Copied!";
                 break;
-            case i = 2:
+            case 2:
                 link_copy[i].style.backgroundColor = "hsl(257, 27%, 26%)";
                 link_copy[i].innerHTML = "Copied!";
                 break;
