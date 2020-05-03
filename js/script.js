@@ -72,35 +72,27 @@ button.onclick = ()=>{
 }
 
 
-// when copy button is pressed
-for (let i = 0; i < link_copy.length; i++) {
-    link_copy[i].addEventListener("click", function() {
-        console.log(i);
-        console.log(link_card_output[i].innerHTML);
-        if(i === 0){
-            link_copy[0].style.backgroundColor = "hsl(257, 27%, 26%)";
-            link_copy[0].innerHTML = "Copied!";
-            link_copy[1].style.backgroundColor = "hsl(180, 66%, 49%)";
-            link_copy[1].innerHTML = "Copy";
-            link_copy[2].style.backgroundColor = "hsl(180, 66%, 49%)";
-            link_copy[2].innerHTML = "Copy";
+link_copy.forEach((e,i) => {
+    e.addEventListener('click', ()=>{
+        link_copy.forEach(e =>{
+            e.style.backgroundColor = "hsl(180, 66%, 49%)";
+            e.innerHTML = 'Copy';
+        })
+        switch(i){
+            case i = 0:
+                link_copy[i].style.backgroundColor = "hsl(257, 27%, 26%)";
+                link_copy[i].innerHTML = "Copied!";
+                break;
+            case i = 1:
+                link_copy[i].style.backgroundColor = "hsl(257, 27%, 26%)";
+                link_copy[i].innerHTML = "Copied!";
+                break;
+            case i = 2:
+                link_copy[i].style.backgroundColor = "hsl(257, 27%, 26%)";
+                link_copy[i].innerHTML = "Copied!";
+                break;
+            default:
+                console.log('error');
         }
-        if(i === 1){
-            link_copy[0].style.backgroundColor = "hsl(180, 66%, 49%)";
-            link_copy[0].innerHTML = "Copy";
-            link_copy[1].style.backgroundColor = "hsl(257, 27%, 26%)";
-            link_copy[1].innerHTML = "Copied!";
-            link_copy[2].style.backgroundColor = "hsl(180, 66%, 49%)";
-            link_copy[2].innerHTML = "Copy";
-        }
-        if(i === 2){
-            link_copy[0].style.backgroundColor = "hsl(180, 66%, 49%)";
-            link_copy[0].innerHTML = "Copy";
-            link_copy[1].style.backgroundColor = "hsl(180, 66%, 49%)";
-            link_copy[1].innerHTML = "Copy";
-            link_copy[2].style.backgroundColor = "hsl(257, 27%, 26%)";
-            link_copy[2].innerHTML = "Copied!";
-        }
-        // link_copy[i].innerHTML = "Copied!"
-    });
-}
+    })
+})
