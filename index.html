@@ -33,14 +33,14 @@
           <button class="shorten__button">Shorten it!</button>
         </main>
         <section class="link_card__wrap">
-          <div class="link_card"><a class="link_card__input_link" href="#" target="_blank"> </a><a class="link_card__output_link" href="#" target="_blank"> </a>
-            <button class="link_card__button">Copy</button>
+          <div class="link_card"><a class="link_card__input_link" href="#" target="_blank"></a><a class="link_card__output_link" href="#" target="_blank" id="output1"></a>
+            <button class="link_card__button" data-clipboard-target="#output1">Copy</button>
           </div>
-          <div class="link_card"><a class="link_card__input_link" href="#" target="_blank"> </a><a class="link_card__output_link" href="#" target="_blank"> </a>
-            <button class="link_card__button">Copy</button>
+          <div class="link_card"><a class="link_card__input_link" href="#" target="_blank"></a><a class="link_card__output_link" href="#" target="_blank" id="output2"></a>
+            <button class="link_card__button" data-clipboard-target="#output2">Copy</button>
           </div>
-          <div class="link_card"><a class="link_card__input_link" href="#" target="_blank"> </a><a class="link_card__output_link" href="#" target="_blank"> </a>
-            <button class="link_card__button">Copy</button>
+          <div class="link_card"><a class="link_card__input_link" href="#" target="_blank"></a><a class="link_card__output_link" href="#" target="_blank" id="output3"></a>
+            <button class="link_card__button" data-clipboard-target="#output3">Copy</button>
           </div>
         </section>
         <section class="statistics">
@@ -94,5 +94,6 @@
       </div>
     </div>
   </body>
+  <script src="js/clipboard.min.js"></script>
   <script src="js/script.js"></script>
 </html>

@@ -1,16 +1,4 @@
 
-// sends input link to api for shortening
-    // fetch("https://rel.ink/api/links/", {
-    // method: 'POST',
-    // headers: {
-    //     'Content-type': 'application/json'
-    // },
-    // body: JSON.stringify({
-    //     url: input.value
-    // })
-    // }).then(res => res.json()).then(data => console.log(data))
-// recieves the data and outputs a clickable shortened link
-
 const input = document.querySelector(".shorten__input");
 const button = document.querySelector(".shorten__button");
 let link_card = document.querySelectorAll(".link_card");
@@ -38,7 +26,6 @@ button.onclick = ()=>{
     function valid(){
         // if valid do this
         if(input.checkValidity() === true){
-            console.log(button_presses);
             // Send a link I want shrunk
             fetch("https://rel.ink/api/links/", {
                 method: 'POST',
@@ -52,7 +39,7 @@ button.onclick = ()=>{
                     // take the hashid(shortened link data) and add it to the shortener
                     new_link = "https://rel.ink/" + data.hashid;
                     link_card_output[button_presses].innerHTML = new_link;
-                    link_card_output[button_presses].href = new_link;;
+                    link_card_output[button_presses].href = new_link;
                 });
             // when new links are shrunk it keeps looping trough the same 3 cards
             button_presses++;
@@ -96,3 +83,7 @@ link_copy.forEach((e,i) => {
         }
     })
 })
+
+
+
+copy = new ClipboardJS(link_copy);

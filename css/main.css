@@ -410,6 +410,9 @@ body {
   .link_card__output_link {
     color: #2acfcf;
   }
+  .link_card__output_link::selection {
+    background: transparent;
+  }
   .link_card__button {
     font-weight: bold;
     font-size: 1.75rem;
